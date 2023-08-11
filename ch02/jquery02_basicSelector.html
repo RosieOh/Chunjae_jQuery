@@ -23,10 +23,33 @@
     <br>
     <script>
     $(function(){
+        //css("속성", "값") - 해당 요소에 인라인 방식으로 스타일 부여
         //jQuery 선택자 연습
-    
+        $("*").css("margin", "0px").css("padding", "0px"); // 전체 선택자 margin 0 padding 0
+
+        // a 요소에 밑줄을 제거하고, 글자색을 딥핑크로 하고, highlight 클래스를 추가하라.
+        // 메소드 체이닝(Method Chaining)
+        $("a").css("text-decoration", "none").css("color","deeppink").addClass("highlight");
+        // 아이디 선택자 - 아이디가 con인 요소의 상단 마진을 30px로 하고, 패딩은 20px로 하여라
+        $("#con").css("margin-top", "30").css("padding", "20px");
+        // 속성 열거법(Property Enumeration)
+        $("#con").css({"margin-top": "30px", "padding" : "20px"});
+
+        // 클래스 선택자 - 클래스가 lst인 요소의 목록 기호를 없애시오.
+        $(".lst").css({"list-style" : "none"});
+        
+
+        // 속성 선택자 a 요소의 href 속성이 존재하면, 글자색은 gold로 하시오
+        $("a[href]").css({"color" : "gold"});
+
+        // 속성 선택자2 - a 요소에 href 속성이 https가 포함된 요소를 선택하여 패딩을 15로 지정
+        $("a[href*='https']").css("padding", "15px");
+
+        // 속성 선택자3 - a 요소에 href 속성이 .html로 끝나는 요소를 선택하여 배경색을 딥스카이블루로 지정
+        $("a[href$='.html']").css("background-color", "deepskyblue");
 
         //속성 선택자
+        //속성 존재 [속성]
         //속성 일치 [속성='값']
         //속성 불일치 [속성!='값']
         //포함하는 문자열 : [속성*='문자열'] 
