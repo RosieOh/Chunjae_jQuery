@@ -19,12 +19,14 @@
     </section>
     <script>
     $(function(){
-        //div 자식 em 요소 선택
+        //div 자식 em 요소 선택 - 글자색을 빨강으로 지정
+        $("div > em").css("color", "red");
         //div 후손 em 요소 선택
+        $("div em").css("backgroundColor", "yellow");
         //span 자식 em요소에 글자색을 흰색(white)로 할 것
-
+        $("span > em").css("color", "white");
         //span 후손 em요소에 배경색을 딥핑크(deeppink)로 할 것
-
+        $("span em").css("background-color", "deeppink")
     });    
     </script>
 </body>
